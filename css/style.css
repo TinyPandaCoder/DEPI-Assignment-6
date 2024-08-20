@@ -5,6 +5,7 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 :root {
@@ -21,7 +22,7 @@ a {
 
 #navbar {
   transition: 0.4s ease;
-  background-color: var(--dark);
+  background-color: transparent;
 }
 
 a.navbar-brand {
@@ -63,3 +64,69 @@ header#header button i.icon-menu {
   }
 }
 /* Navigation  Bar */
+
+/* main Section */
+section {
+  height: fit-content;
+}
+section#main {
+  background: url("../imgs/main.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+section#main div#main-layer {
+  position: absolute;
+
+  background-color: #000000cc;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+section#main h3 {
+  color: white;
+  font-size: 1.5rem;
+}
+section#main h1 {
+  color: var(--pink);
+  text-transform: uppercase;
+  font-size: 4.4rem;
+}
+section#main #career {
+  color: white;
+
+  font-size: 2rem;
+}
+
+div#next-word {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media (max-width: 570px) {
+  section#main h3 {
+    font-size: 1rem;
+  }
+  section#main h1 {
+    font-size: 3rem;
+  }
+  section#main #career {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 390px) {
+  section#main h3 {
+    font-size: 1.4rem;
+  }
+  section#main h1 {
+    font-size: 2rem;
+  }
+  section#main #career {
+    font-size: 1.4rem;
+  }
+}
+/* main Section */
