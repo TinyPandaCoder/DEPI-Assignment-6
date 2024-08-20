@@ -7,7 +7,34 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-
+.section-title {
+  position: relative;
+  font-size: 3rem;
+  color: #333333;
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.section-title::before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  top: 60px;
+  left: 35%;
+  right: 35%;
+  border: 1px solid #ff305b;
+  border-left: 0px;
+  border-right: 0px;
+}
+.section-title::after {
+  position: absolute;
+  content: "";
+  bottom: 5%;
+  left: 15%;
+  right: 15%;
+  border-bottom: 1px solid #ff305b;
+}
 :root {
   --dark: #333333;
   --pink: #ff305b;
@@ -156,6 +183,7 @@ div#next-word {
 #about {
   padding: 80px 0;
 }
+
 #about h3 {
   color: #333333;
   position: relative;
@@ -239,34 +267,6 @@ div#next-word {
 #services {
   background-color: rgb(245, 245, 245);
 }
-#services #services-title {
-  position: relative;
-  font-size: 3rem;
-  color: #333333;
-  width: fit-content;
-  margin: auto;
-  padding-bottom: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-#services #services-title:before {
-  position: absolute;
-  content: "";
-  bottom: -3px;
-  top: 60px;
-  left: 35%;
-  right: 35%;
-  border: 1px solid #ff305b;
-  border-left: 0px;
-  border-right: 0px;
-}
-#services #services-title:after {
-  position: absolute;
-  content: "";
-  bottom: 5%;
-  left: 15%;
-  right: 15%;
-  border-bottom: 1px solid #ff305b;
-}
 .card {
   padding: 2rem 1rem;
   background-color: rgb(246, 246, 246);
@@ -302,34 +302,7 @@ div#next-word {
 #portfilio {
   padding: 80px 0;
 }
-#portfilio #portfilio-title {
-  position: relative;
-  font-size: 3rem;
-  color: #333333;
-  width: fit-content;
-  margin: auto;
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-#portfilio #portfilio-title:before {
-  position: absolute;
-  content: "";
-  bottom: -3px;
-  top: 60px;
-  left: 35%;
-  right: 35%;
-  border: 1px solid #ff305b;
-  border-left: 0px;
-  border-right: 0px;
-}
-#portfilio #portfilio-title:after {
-  position: absolute;
-  content: "";
-  bottom: 5%;
-  left: 15%;
-  right: 15%;
-  border-bottom: 1px solid #ff305b;
-}
+
 #portfilio #categories button {
   all: unset;
   color: #333333;
@@ -480,6 +453,51 @@ div.owl-carousel div.owl-dots button.active span {
   padding: 1rem;
 }
 /* Feedback */
+
+/* Blog */
+section#blog {
+  background-color: rgb(238, 238, 238);
+  padding: 80px 0;
+}
+section#blog div.blog {
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+  border-radius: 10px;
+}
+section#blog div.blog-text {
+  padding: 1rem 1rem;
+}
+section#blog div.blog-text h5 {
+  font-weight: 400;
+  font-size: medium;
+}
+section#blog div.blog-text h3 a {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+section#blog div.blog-text a {
+  color: #333333;
+  transition: 0.3s ease;
+}
+
+section#blog div.blog-text a:hover {
+  color: #f54a6c;
+}
+section#blog div.blog-text .read a {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+section#blog iframe {
+  flex: 1;
+}
+section#blog .blog-img {
+  height: 250px;
+}
+/* Blog */
+
 /* Footer */
 footer {
   background-color: #333333;
