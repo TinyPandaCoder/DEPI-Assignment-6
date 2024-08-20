@@ -6,6 +6,7 @@ window.addEventListener("scroll", function () {
   const navbarHeight = -navbar.offsetHeight + 3;
   if (window.scrollY != 0) {
     navbar.style.background = "#333333";
+    navbar.classList.remove("bg-transparent");
   } else {
     navbar.classList.add("bg-transparent");
   }
