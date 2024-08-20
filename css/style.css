@@ -21,7 +21,23 @@ a {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
 }
-
+div.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: #000000;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.active {
+  color: #ff305b !important;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
 /* Navigation  Bar */
 
 #navbar {
@@ -235,8 +251,8 @@ div#next-word {
 #services #services-title:before {
   position: absolute;
   content: "";
-  bottom: 0%;
-  top: 90%;
+  bottom: -3px;
+  top: 60px;
   left: 35%;
   right: 35%;
   border: 1px solid #ff305b;
@@ -280,3 +296,106 @@ div#next-word {
   scale: 1.2;
 }
 /* Srvices Section */
+
+/* Portfilio */
+
+#portfilio {
+  padding: 80px 0;
+}
+#portfilio #portfilio-title {
+  position: relative;
+  font-size: 3rem;
+  color: #333333;
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+#portfilio #portfilio-title:before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  top: 60px;
+  left: 35%;
+  right: 35%;
+  border: 1px solid #ff305b;
+  border-left: 0px;
+  border-right: 0px;
+}
+#portfilio #portfilio-title:after {
+  position: absolute;
+  content: "";
+  bottom: 5%;
+  left: 15%;
+  right: 15%;
+  border-bottom: 1px solid #ff305b;
+}
+#portfilio #categories button {
+  all: unset;
+  color: #333333;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s linear;
+  padding: 2rem 1rem;
+}
+#portfili div.gallery {
+  transition: 0.3s ease-in-out;
+}
+#portfilio div.gallery-card:hover div.overlay {
+  opacity: 0.5;
+}
+#portfilio div.gallery-card:hover i {
+  opacity: 1;
+}
+#portfilio div.gallery-card i {
+  color: #f54a6c;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+/* Portfilio */
+
+/* Stats */
+#stats {
+  background-color: rgb(239, 239, 239);
+  padding: 80px 0px;
+}
+#stats i {
+  color: #f54a6c;
+  font-size: 2rem;
+  display: inline-flex;
+}
+#stats div.stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#stats div.stat h4 {
+  margin-bottom: 0;
+  font-weight: 900;
+}
+/* Stats */
+
+/* Footer */
+footer {
+  background-color: #333333;
+  padding: 3rem 0px;
+  color: #fff;
+}
+footer div.social a {
+  color: #fff;
+  transition: 0.4s ease-in-out;
+  font-size: 2rem;
+}
+footer div.social a:hover {
+  color: #ff305b;
+}
+footer p a {
+  color: #ff305b;
+}
+footer p a:hover {
+  text-decoration: underline;
+}
+/* Footer */

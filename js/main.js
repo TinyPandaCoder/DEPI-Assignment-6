@@ -15,7 +15,6 @@ window.addEventListener("scroll", function () {
   } else {
     navbar.style.top = "0px";
   }
-  console.log("last scroll: " + lastScrollTop);
 
   lastScrollTop = window.scrollY;
 });
@@ -55,7 +54,40 @@ setInterval(() => {
     professions[pos].classList.add("d-none");
     pos = (pos + 1) % professions.length;
     professions[pos].classList.remove("d-none");
-    console.log(pos);
   }
 }, 1);
 // main section
+
+// stats section generatde random numbers
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const statsH4 = document.querySelectorAll("#stats h4");
+      const len = statsH4.length;
+      randomValues = [];
+      currentValues = new Array(len).fill(0);
+      const step = 1;
+      for (let i = 0; i < len; i++) {
+        randomValues.push(Math.floor(Math.random() * 1000));
+      }
+      console.log(randomValues);
+      setInterval(() => {
+        for (let i = 0; i < len; i++) {
+          if (randomValues[i] <= currentValues[i]) continue;
+          currentValues[i] += Math.min(
+            step,
+            randomValues[i] - currentValues[i]
+          );
+          statsH4[i].innerHTML = currentValues[i];
+        }
+      }, 7);
+    } else {
+      console.log("Out of viewport");
+    }
+  });
+});
+
+const stats = document.querySelector("#stats");
+observer.observe(stats);
+
+// stats section generatde random numbers
