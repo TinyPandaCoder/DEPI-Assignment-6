@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --dark: #333333;
+  --pink: #ff305b;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navigation  Bar */
+
+#navbar {
+  transition: 0.4s ease;
+  background-color: var(--dark);
+}
+
+a.navbar-brand {
+  color: var(--pink);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+a.nav-link {
+  color: #fff;
+  font-weight: 300;
+}
+a.nav-link:hover,
+a.navbar-brand:hover {
+  color: #ff305b;
+  transition: 0.5s ease;
+}
+
+header#header button {
+  all: unset !important;
+  cursor: pointer !important;
+}
+header#header button i.icon-menu {
+  color: #fff !important;
+  font-size: 2rem;
+}
+#navbarNav {
+  flex-grow: 0;
+}
+@media (min-width: 768px) {
+  header#header button {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #navbarNav {
+    background-color: var(--dark);
+  }
+}
+/* Navigation  Bar */
