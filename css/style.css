@@ -72,6 +72,7 @@ header#header button i.icon-menu {
 /* main Section */
 section {
   height: fit-content;
+  overflow: hidden;
 }
 section#main {
   background: url("../imgs/main.jpg");
@@ -134,66 +135,148 @@ div#next-word {
   }
 }
 /* main Section */
-/*About Section*/
-section#about {
-  padding: 100px 0px;
+
+/* About Section */
+#about {
+  padding: 80px 0;
 }
-section#about p {
-  border-bottom-style: dashed !important;
+#about h3 {
+  color: #333333;
+  position: relative;
+  padding-left: 4px;
+  text-transform: uppercase;
 }
-section#about h3::before {
+#about h3::before {
+  border-left: 3px solid #ff305b;
   content: "";
   position: absolute;
-  border-left: 4px solid #ff305b;
-  top: 19%;
-  bottom: 19%;
-  left: -6px;
+  top: 20%;
+  bottom: 20%;
+  left: -4px;
 }
-section#about div.text a {
-  padding: 15px 30px;
-  background-color: #ff305b;
+#about p {
+  padding: 1rem 0rem;
+  line-height: 1.75;
+  border-bottom: 1px dashed #333333;
+}
+#about .buttons a {
+  background-color: var(--pink);
   color: #fff;
-  border-radius: 5px;
-}
-section#about div.text a:hover {
+  border-radius: 0.3rem;
+  padding: 1rem 2rem;
+  width: fit-content;
   transition: 0.3s ease;
-
-  background-color: #b7092c;
 }
-section#about #about-img-container {
+#about .buttons a:hover {
+  background-color: #a40021;
+}
+#about div.container div.row {
+  --bs-gutter-x: 8rem; /* Increase this value for more spacing */
+}
+#about #image-container {
   border: 10px solid #333333;
-  padding: 0px !important;
-  height: 75%;
+  padding: 0;
 }
-section#about div.text {
-  padding-left: 100px !important;
-}
-section#about #about-img-container div#about-img-container-second {
-  position: relative;
-  border-radius: 10px;
-  left: 40px;
-  top: 40px;
-}
-section#about #about-img-container div#about-img-container-second .overlay-img {
-  overflow: hidden;
-  width: 100%;
-  color: #fff;
-  background-color: #00000063;
-  font-size: 2rem;
+#about #image-container .about-overlay {
   position: absolute;
-  height: 0%;
   bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  overflow: hidden;
+  background-color: #00000089;
+  height: 0;
+  transition: 0.3s ease-in-out;
+  border-radius: inherit;
 }
-
-section#about div#about-img-container div:hover .overlay-img {
-  transition: 0.5s ease-in-out;
-  height: 100% !important;
+#about #image-container #social-container {
+  border-radius: 1rem;
+  position: relative;
+  top: 2rem;
+  left: 7%;
 }
-section#about #about-img-container .overlay-img a {
+#about #image-container #social-container:hover .about-overlay {
+  height: 100%;
+}
+#about #image-container .about-overlay a {
   color: #fff;
+  font-size: 2rem;
+  transition: 0.3s ease;
 }
-section#about #about-img-container .overlay-img a:hover {
+#about #image-container .about-overlay a:hover {
   color: #ff305b;
-  transition: 0.4s ease;
 }
-/*About Section*/
+@media (max-width: 992px) {
+  #about #image-container #social-container {
+    left: 0px !important;
+    top: 0px !important;
+  }
+  #about #image-container {
+    border: 0px;
+  }
+}
+/* About Section */
+
+/* Srvices Section */
+#services {
+  background-color: rgb(245, 245, 245);
+}
+#services #services-title {
+  position: relative;
+  font-size: 3rem;
+  color: #333333;
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#services #services-title:before {
+  position: absolute;
+  content: "";
+  bottom: 0%;
+  top: 90%;
+  left: 35%;
+  right: 35%;
+  border: 1px solid #ff305b;
+  border-left: 0px;
+  border-right: 0px;
+}
+#services #services-title:after {
+  position: absolute;
+  content: "";
+  bottom: 5%;
+  left: 15%;
+  right: 15%;
+  border-bottom: 1px solid #ff305b;
+}
+.card {
+  padding: 2rem 1rem;
+  background-color: rgb(246, 246, 246);
+  transition: 0.3s ease-in-out;
+}
+#services .card i {
+  font-size: 2rem;
+  color: #ff305b;
+  transition: 0.3s ease-in-out;
+
+  margin-bottom: 1rem;
+}
+#services .card h2 {
+  color: #555555;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+#services .card p {
+  line-height: 1.5;
+}
+.card:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #ffffff !important;
+}
+.card:hover i {
+  scale: 1.2;
+}
+/* Srvices Section */

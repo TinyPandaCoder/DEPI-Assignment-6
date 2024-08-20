@@ -33,13 +33,13 @@ window.addEventListener("resize", () => {
 });
 // Zoom Closes menu
 
-// // Padding to main section equal to nav bar
-// const mainSection = document.querySelector("#main");
-// mainSection.style.padding = `${navbar.offsetHeight}px 0px 0px 0px`;
-// // Padding to main section equal to nav bar
+// Padding to main section equal to nav bar
+const mainSection = document.querySelector("#main");
+mainSection.style.padding = `${navbar.offsetHeight * 4}px 0px 0px 0px`;
+// Padding to main section equal to nav bar
 
 // main section
-const professions = document.querySelectorAll("#word");
+const professions = document.querySelectorAll(".word");
 let i = 100,
   pos = 0;
 let speed = 0.3;
