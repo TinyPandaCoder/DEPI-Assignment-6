@@ -31,7 +31,7 @@ div.overlay {
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
-.active {
+.active-text {
   color: #ff305b !important;
 }
 button {
@@ -378,6 +378,108 @@ div#next-word {
 }
 /* Stats */
 
+/* Feedback */
+#feedback {
+  padding: 80px 0;
+}
+#feedback #feedback-title {
+  position: relative;
+  font-size: 3rem;
+  color: #333333;
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+#feedback #feedback-title:before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  top: 60px;
+  left: 35%;
+  right: 35%;
+  border: 1px solid #ff305b;
+  border-left: 0px;
+  border-right: 0px;
+}
+#feedback #feedback-title:after {
+  position: absolute;
+  content: "";
+  bottom: 5%;
+  left: 15%;
+  right: 15%;
+  border-bottom: 1px solid #ff305b;
+}
+
+#feedback .item img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+#feedback .item .item-text h5 {
+  color: #333333;
+}
+#feedback .item .item-text h2 {
+  color: #333333;
+}
+#feedback .item .item-text p {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555555;
+}
+#feedback .item .item-text ul li i {
+  color: orange;
+  font-size: larger;
+}
+
+#feedback .slider {
+  overflow: scroll;
+  padding: 1rem 2rem;
+}
+#feedback .item {
+  top: 1rem;
+  display: flex;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  gap: 3rem;
+  max-width: 750px;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: rgb(254, 80, 116);
+  background: rgb(254, 80, 116);
+  background: linear-gradient(
+    146deg,
+    rgba(254, 80, 116, 1) 16%,
+    rgb(244, 244, 244) 16%
+  );
+  flex-shrink: 0;
+}
+div.owl-carousel div.owl-dots button span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #f54a6c;
+  transition: 0.4s ease;
+  transition-property: background;
+  transition-property: border-radius;
+  transition-property: width;
+}
+div.owl-carousel div.owl-dots {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+div.owl-carousel div.owl-dots button.active span {
+  background-color: #f54a6c;
+  width: 30px;
+  border-radius: 0.3rem;
+}
+.owl-item {
+  padding: 1rem;
+}
+/* Feedback */
 /* Footer */
 footer {
   background-color: #333333;

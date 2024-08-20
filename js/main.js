@@ -89,5 +89,18 @@ const observer = new IntersectionObserver((entries) => {
 
 const stats = document.querySelector("#stats");
 observer.observe(stats);
-
 // stats section generatde random numbers
+
+// Caruosel
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    items: 1, // Display 1 item
+    loop: true, // Enable looping
+    margin: 10, // Add margin between items (optional)
+    nav: false, // Show navigation arrows (optional)
+    autoplay: false, // Enable autoplay (optional)
+    autoplayTimeout: 3000, // Autoplay interval in milliseconds (optional)
+  });
+});
+
+// Caruosel

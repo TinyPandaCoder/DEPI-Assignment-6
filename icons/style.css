@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?qrf77n');
-  src:  url('fonts/icomoon.eot?qrf77n#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?qrf77n') format('truetype'),
-    url('fonts/icomoon.woff?qrf77n') format('woff'),
-    url('fonts/icomoon.svg?qrf77n#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?xudg00');
+  src:  url('fonts/icomoon.eot?xudg00#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xudg00') format('truetype'),
+    url('fonts/icomoon.woff?xudg00') format('woff'),
+    url('fonts/icomoon.svg?xudg00#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -79,14 +79,29 @@
 .icon-usd:before {
   content: "\e901";
 }
+.icon-file-picture:before {
+  content: "\e927";
+}
 .icon-copy:before {
   content: "\e92c";
+}
+.icon-location:before {
+  content: "\e947";
 }
 .icon-calendar:before {
   content: "\e953";
 }
 .icon-cloud-download:before {
   content: "\e9c2";
+}
+.icon-star-empty:before {
+  content: "\e9d7";
+}
+.icon-star-half:before {
+  content: "\e9d8";
+}
+.icon-star-full:before {
+  content: "\e9d9";
 }
 .icon-google:before {
   content: "\ea88";
