@@ -20,14 +20,8 @@
     <link rel="stylesheet" href="icons/style.css" />
 
     <!-- OWL CARUOSEL  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <!-- Custom css -->
     <link rel="stylesheet" href="css/style.css" />
 
@@ -100,7 +94,7 @@
             <div id="next-word" class="border-end border-1">
               <div class="overflow-hidden pe-2">
                 <i class="word">Designer</i>
-                <i class="word" class="d-none">Developer</i>
+                <i class="word d-none" class="">Developer</i>
               </div>
             </div>
           </h4>
@@ -220,99 +214,108 @@
           <div class="row mb-3">
             <h2 class="fs-1 section-title" id="">Our Portfilio</h2>
           </div>
-          <div
-            id="categories"
-            class="mb-3 d-flex justify-content-center gap-5 flex-wrap"
-          >
-            <button class="active-text">All</button>
-            <button>Graphic</button>
-            <button>Web Design</button>
-            <button>Branding</button>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="text-center">
+                <ul
+                  class="col d-flex justify-content-center list-unstyled gap-4 flex-wrap"
+                  id="filter"
+                >
+                  <li>
+                    <button class="categories active-text" data-filter="*">
+                      All
+                    </button>
+                  </li>
+                  <li>
+                    <button class="categories" data-filter=".graphic">
+                      Graphic
+                    </button>
+                  </li>
+                  <li>
+                    <button class="categories" data-filter=".webDesign">
+                      Web Design
+                    </button>
+                  </li>
+                  <li>
+                    <button class="categories" data-filter=".branding">
+                      Branding
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="gallery">
-            <div class="row g-5">
-              <div class="col-12 col-md-6 col-xl-4">
-                <button class="image-gallery">
-                  <div
-                    class="gallery-card position-relative"
-                    category="webDesign"
-                  >
-                    <img src="imgs/1.jpg" alt="" />
-                    <div class="overlay"></div>
-                    <i
-                      class="icon-copy position-absolute bottom-0 end-0 p-2 fs-3"
-                    ></i>
-                  </div>
+
+          <div class="portfolioContainer row gy-4">
+            <div class="col-xl-4 col-lg-6 col-xs-12 webDesign">
+              <div class="item-box">
+                <button class="mfp-image" href="#" title="Project Name">
+                  <img
+                    class="item-container img-fluid"
+                    src="imgs/1.jpg"
+                    alt="work-img"
+                  />
+                  <div class="overlay"><i class="icon-file-code-o"></i></div>
                 </button>
               </div>
-              <div class="col-12 col-md-6 col-xl-4">
-                <button class="image-gallery">
-                  <div
-                    class="gallery-card position-relative"
-                    category="webDesign"
-                  >
-                    <img src="imgs/1.jpg" alt="" />
-                    <div class="overlay"></div>
-                    <i
-                      class="icon-copy position-absolute bottom-0 end-0 p-2 fs-3"
-                    ></i>
-                  </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-xs-12 graphic branding">
+              <div class="item-box">
+                <button class="mfp-image" href="#" title="Project Name">
+                  <img
+                    class="item-container img-fluid"
+                    src="imgs/3.jpg"
+                    alt="work-img"
+                  />
+                  <div class="overlay"><i class="icon-file-code-o"></i></div>
                 </button>
               </div>
-              <div class="col-12 col-md-6 col-xl-4">
-                <button class="image-gallery">
-                  <div
-                    class="gallery-card position-relative"
-                    category="webDesign"
-                  >
-                    <img src="imgs/1.jpg" alt="" />
-                    <div class="overlay"></div>
-                    <i
-                      class="icon-copy position-absolute bottom-0 end-0 p-2 fs-3"
-                    ></i>
-                  </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-xs-12 graphic">
+              <div class="item-box">
+                <button class="mfp-image" href="#" title="Project Name">
+                  <img
+                    class="item-container img-fluid"
+                    src="imgs/7.jpg"
+                    alt="work-img"
+                  />
+                  <div class="overlay"><i class="icon-file-code-o"></i></div>
                 </button>
               </div>
-              <div class="col-12 col-md-6 col-xl-4">
-                <button class="image-gallery">
-                  <div
-                    class="gallery-card position-relative"
-                    category="webDesign"
-                  >
-                    <img src="imgs/1.jpg" alt="" />
-                    <div class="overlay"></div>
-                    <i
-                      class="icon-copy position-absolute bottom-0 end-0 p-2 fs-3"
-                    ></i>
-                  </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-xs-12 graphic webDesign">
+              <div class="item-box">
+                <button class="mfp-image" href="#" title="Project Name">
+                  <img
+                    class="item-container img-fluid"
+                    src="imgs/8.jpg"
+                    alt="work-img"
+                  />
+                  <div class="overlay"><i class="icon-file-code-o"></i></div>
                 </button>
               </div>
-              <div class="col-12 col-md-6 col-xl-4">
-                <button class="image-gallery">
-                  <div
-                    class="gallery-card position-relative"
-                    category="webDesign"
-                  >
-                    <img src="imgs/1.jpg" alt="" />
-                    <div class="overlay"></div>
-                    <i
-                      class="icon-copy position-absolute bottom-0 end-0 p-2 fs-3"
-                    ></i>
-                  </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-xs-12 graphic webDesign">
+              <div class="item-box">
+                <button class="mfp-image" href="#" title="Project Name">
+                  <img
+                    class="item-container img-fluid"
+                    src="imgs/9.jpg"
+                    alt="work-img"
+                  />
+                  <div class="overlay"><i class="icon-file-code-o"></i></div>
                 </button>
               </div>
-              <div class="col-12 col-sm-6 col-xl-4">
-                <button class="image-gallery">
-                  <div
-                    class="gallery-card position-relative"
-                    category="webDesign"
-                  >
-                    <img src="imgs/1.jpg" alt="" />
-                    <div class="overlay"></div>
-                    <i
-                      class="icon-copy position-absolute bottom-0 end-0 p-2 fs-3"
-                    ></i>
-                  </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-xs-12 graphic branding">
+              <div class="item-box">
+                <button class="mfp-image" href="#" title="Project Name">
+                  <img
+                    class="item-container img-fluid"
+                    src="imgs/10.jpg"
+                    alt="work-img"
+                  />
+                  <div class="overlay"><i class="icon-file-code-o"></i></div>
                 </button>
               </div>
             </div>
@@ -634,8 +637,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- oWL Carousel script -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- Gallery Filter isotop -->
+    <script src="js/isotope.pkgd.min.js"></script>
 
     <!-- main Scirpt -->
     <script src="js/main.js"></script>

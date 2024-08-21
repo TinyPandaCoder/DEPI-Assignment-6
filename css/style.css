@@ -5,7 +5,7 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 .section-title {
   position: relative;
@@ -55,7 +55,7 @@ div.overlay {
   left: 0px;
   bottom: 0px;
   right: 0px;
-  background-color: #000000;
+  background-color: #00000071;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
@@ -76,13 +76,13 @@ button {
 #navbar a.navbar-brand {
   color: var(--pink);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 #navbar a {
   color: #fff;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 #navbar a:hover {
   color: #ff305b !important;
@@ -304,28 +304,30 @@ div#next-word {
   padding: 80px 10px;
 }
 
-#portfolio #categories button {
+#portfolio ul button {
   all: unset;
   color: #333333;
   font-size: 1.3rem;
   cursor: pointer;
   text-transform: uppercase;
-  transition: 0.3s linear;
-  padding: 2rem 1rem;
+  transition: 0.2s linear;
+  padding: 0.5rem 1rem;
 }
-#portfolio div.gallery {
-  transition: 0.3s ease-in-out;
+#portfolio div.portfolioContainer div.item-box button {
+  position: relative;
+  display: block;
 }
-#portfolio div.gallery-card:hover div.overlay {
-  opacity: 0.5;
+
+#portfolio div.portfolioContainer div.item-box button i {
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+  color: #cf2547;
+  font-size: 2rem;
 }
-#portfolio div.gallery-card:hover i {
+
+#portfolio div.portfolioContainer div.item-box button:hover div.overlay {
   opacity: 1;
-}
-#portfolio div.gallery-card i {
-  color: #f54a6c;
-  opacity: 0;
-  transition: 0.3s linear;
 }
 /* Portfilio */
 

@@ -194,3 +194,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Toggle nav links color
+
+// Initialize Isotope
+
+$(window).on("load", function () {
+  var $container = $(".portfolioContainer");
+  var $filter = $("#filter");
+  $container.isotope({
+    filter: "*",
+    layoutMode: "masonry",
+    animationOptions: {
+      duration: 750,
+      easing: "linear",
+    },
+  });
+  $filter.find("button").click(function () {
+    var selector = $(this).attr("data-filter");
+    $filter.find("button").removeClass("active-text");
+    $(this).addClass("active-text");
+    $container.isotope({
+      filter: selector,
+      animationOptions: {
+        animationDuration: 750,
+        easing: "linear",
+        queue: false,
+      },
+    });
+    return false;
+  });
+});
+// Initialize Isotope
