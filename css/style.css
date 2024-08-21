@@ -182,7 +182,7 @@ div#next-word {
 
 /* About Section */
 #about {
-  padding: 80px 0;
+  padding: 80px 15px;
 }
 
 #about h3 {
@@ -301,7 +301,7 @@ div#next-word {
 /* Portfilio */
 
 #portfolio {
-  padding: 80px 0;
+  padding: 80px 10px;
 }
 
 #portfolio #categories button {
@@ -475,6 +475,7 @@ section#blog .card a {
 }
 section#blog .card {
   text-align: left;
+  aspect-ratio: 1.5;
 }
 section#blog .card a:hover {
   color: #f54a6c;
@@ -493,7 +494,7 @@ section#blog .card i {
 
 /* Contact Us */
 section#contact-us {
-  padding: 80px 0;
+  padding: 80px 10px;
 }
 
 section#contact-us input,
