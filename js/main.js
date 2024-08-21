@@ -178,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Add 'active' class to the corresponding nav link
           const activeLink = document.querySelector(`[href="#${id}"]`);
-          console.log(activeLink);
           if (activeLink) {
             activeLink.classList.add("active-text");
           }
