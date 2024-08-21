@@ -20,7 +20,7 @@
   position: absolute;
   content: "";
   bottom: -3px;
-  top: 60px;
+  top: 83%;
   left: 35%;
   right: 35%;
   border: 1px solid #ff305b;
@@ -39,7 +39,8 @@
   --dark: #333333;
   --pink: #ff305b;
 }
-img {
+img,
+iframe {
   width: 100%;
   height: 100%;
   border-radius: inherit;
@@ -72,19 +73,19 @@ button {
   background-color: transparent;
 }
 
-a.navbar-brand {
+#navbar a.navbar-brand {
   color: var(--pink);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
-a.nav-link {
+#navbar a {
   color: #fff;
   font-weight: 300;
+  font-size: 2rem;
 }
-a.nav-link:hover,
-a.navbar-brand:hover {
-  color: #ff305b;
+#navbar a:hover {
+  color: #ff305b !important;
   transition: 0.5s ease;
 }
 
@@ -99,13 +100,13 @@ header#header button i.icon-menu {
 #navbarNav {
   flex-grow: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header#header button {
     display: none !important;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   #navbarNav {
     background-color: var(--dark);
   }
@@ -299,11 +300,11 @@ div#next-word {
 
 /* Portfilio */
 
-#portfilio {
+#portfolio {
   padding: 80px 0;
 }
 
-#portfilio #categories button {
+#portfolio #categories button {
   all: unset;
   color: #333333;
   font-size: 1.3rem;
@@ -312,16 +313,16 @@ div#next-word {
   transition: 0.3s linear;
   padding: 2rem 1rem;
 }
-#portfili div.gallery {
+#portfolio div.gallery {
   transition: 0.3s ease-in-out;
 }
-#portfilio div.gallery-card:hover div.overlay {
+#portfolio div.gallery-card:hover div.overlay {
   opacity: 0.5;
 }
-#portfilio div.gallery-card:hover i {
+#portfolio div.gallery-card:hover i {
   opacity: 1;
 }
-#portfilio div.gallery-card i {
+#portfolio div.gallery-card i {
   color: #f54a6c;
   opacity: 0;
   transition: 0.3s linear;
@@ -459,44 +460,62 @@ section#blog {
   background-color: rgb(238, 238, 238);
   padding: 80px 0;
 }
-section#blog div.blog {
-  background-color: rgb(255, 255, 255);
-  padding: 0;
-  border-radius: 10px;
+section#blog .card {
+  background-color: #fff;
+  width: 100% !important;
 }
-section#blog div.blog-text {
-  padding: 1rem 1rem;
-}
-section#blog div.blog-text h5 {
-  font-weight: 400;
-  font-size: medium;
-}
-section#blog div.blog-text h3 a {
-  font-size: 1.5rem;
-  text-transform: capitalize;
-}
-section#blog div.blog-text a {
-  color: #333333;
+section#blog .card a {
   transition: 0.3s ease;
+  color: #000000;
+  width: fit-content;
 }
-
-section#blog div.blog-text a:hover {
+section#blog .card {
+  text-align: left;
+}
+section#blog .card a:hover {
   color: #f54a6c;
 }
-section#blog div.blog-text .read a {
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+section#blog .card div.card-body h5.card-title {
+  text-transform: capitalize;
+}
+section#blog .card div.card-body h6 {
+  font-weight: 400;
 }
 
-section#blog iframe {
-  flex: 1;
-}
-section#blog .blog-img {
-  height: 250px;
+section#blog .card i {
+  scale: 1;
 }
 /* Blog */
+
+/* Contact Us */
+section#contact-us {
+  padding: 80px 0;
+}
+
+section#contact-us input,
+section#contact-us textarea {
+  border: 1px solid #55555574;
+  transition: 0.3s ease;
+  transition-property: box-shadow;
+}
+section#contact-us input:focus,
+section#contact-us textarea:focus {
+  box-shadow: 0 0 0 0.25rem #ffdbe2;
+  border: 1px solid transparent;
+}
+
+section#contact-us button {
+  background-color: #f54a6c;
+  border: 0;
+  font-size: 1.2rem;
+}
+section#contact-us button:hover {
+  background-color: #c80028;
+}
+.new-sibling {
+  color: red;
+}
+/* Contact Us */
 
 /* Footer */
 footer {

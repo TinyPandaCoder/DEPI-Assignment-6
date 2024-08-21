@@ -70,7 +70,6 @@ const observer = new IntersectionObserver((entries) => {
       for (let i = 0; i < len; i++) {
         randomValues.push(Math.floor(Math.random() * 1000));
       }
-      console.log(randomValues);
       setInterval(() => {
         for (let i = 0; i < len; i++) {
           if (randomValues[i] <= currentValues[i]) continue;
@@ -82,7 +81,6 @@ const observer = new IntersectionObserver((entries) => {
         }
       }, 7);
     } else {
-      console.log("Out of viewport");
     }
   });
 });
@@ -102,5 +100,99 @@ $(document).ready(function () {
     autoplayTimeout: 3000, // Autoplay interval in milliseconds (optional)
   });
 });
-
 // Caruosel
+
+// Form
+
+const form = document.getElementById("form");
+
+form.addEventListener("input", (e) => {
+  if (e.target.value.length > 0) {
+    if (e.target.nextElementSibling) {
+      e.target.nextElementSibling.remove();
+    }
+    e.target.style = "";
+  }
+});
+function isValidEmail(email) {
+  const emailPattern = new RegExp("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+
+  return emailPattern.test(email);
+}
+const inputId = ["inputMessage", "inputEmail", "inputName", "inputSubject"];
+const inputMessage = [
+  "Please provide message.",
+  "Please provide email.",
+  "Please provide first name.",
+  "Subject is required.",
+];
+form.addEventListener("focusout", (e) => {
+  console.log(e.target.value);
+  if (e.target.value == "") {
+    e.target.style.border = "2px solid red";
+    if (!e.target.nextElementSibling) {
+      const newSiblingElement = document.createElement("div");
+      newSiblingElement.className = "new-sibling py-2";
+      let content;
+      for (let i = 0; i < inputId.length; i++)
+        content = e.target.id == inputId[i] ? inputMessage[i] : content;
+      newSiblingElement.textContent = content;
+      e.target.insertAdjacentElement("afterend", newSiblingElement);
+    }
+  } else {
+    e.target.style = "";
+    if (e.target.id == "inputEmail") {
+      console.log(isValidEmail(e.target.value));
+      if (!isValidEmail(e.target.value)) {
+        e.target.style.border = "2px solid red";
+        if (!e.target.nextElementSibling) {
+          const newSiblingElement = document.createElement("div");
+          newSiblingElement.className = "new-sibling py-2";
+          newSiblingElement.textContent =
+            "Please enter valid email example@test.com";
+          e.target.insertAdjacentElement("afterend", newSiblingElement);
+        }
+      }
+    }
+  }
+});
+
+// Form
+
+// Toggle nav links color
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("#navbarNav .nav-link");
+
+  // Create an Intersection Observer instance
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Get the section ID
+          const id = entry.target.getAttribute("id");
+
+          // Remove 'active' class from all nav links
+          navLinks.forEach((link) => {
+            link.classList.remove("active-text");
+          });
+
+          // Add 'active' class to the corresponding nav link
+          const activeLink = document.querySelector(`[href="#${id}"]`);
+          console.log(activeLink);
+          if (activeLink) {
+            activeLink.classList.add("active-text");
+          }
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  // Observe each section
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+});
+
+// Toggle nav links color
