@@ -20,7 +20,7 @@
   position: absolute;
   content: "";
   bottom: -3px;
-  top: 83%;
+  top: 84%;
   left: 35%;
   right: 35%;
   border: 1px solid #ff305b;
@@ -76,13 +76,13 @@ button {
 #navbar a.navbar-brand {
   color: var(--pink);
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #navbar a {
   color: #fff;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 #navbar a:hover {
   color: #ff305b !important;
@@ -445,10 +445,14 @@ div.owl-carousel div.owl-dots {
   justify-content: center;
   gap: 1rem;
 }
+div.owl-carousel div.owl-dots button span {
+  background-color: #fff !important;
+}
 div.owl-carousel div.owl-dots button.active span {
-  background-color: #f54a6c;
+  background-color: #f54a6c !important;
   width: 30px;
   border-radius: 0.3rem;
+  transition: 0.3s ease;
 }
 .owl-item {
   padding: 1rem;

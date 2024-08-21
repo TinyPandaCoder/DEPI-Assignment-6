@@ -156,7 +156,6 @@ form.addEventListener("focusout", (e) => {
     }
   }
 });
-
 // Form
 
 // Toggle nav links color
