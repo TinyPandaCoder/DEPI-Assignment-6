@@ -39,6 +39,10 @@
   --dark: #333333;
   --pink: #ff305b;
 }
+.light-pink {
+  color: var(--pink);
+}
+
 img,
 iframe {
   width: 100%;

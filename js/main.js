@@ -10,6 +10,7 @@ window.addEventListener("scroll", function () {
   } else {
     navbar.classList.add("bg-transparent");
   }
+
   if (window.scrollY - lastScrollTop > 0) {
     navbar.style.top = navbarHeight.toString() + "px";
   } else {
@@ -224,3 +225,7 @@ $(window).on("load", function () {
   });
 });
 // Initialize Isotope
+
+// Modal
+
+// Modal
