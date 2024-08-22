@@ -226,6 +226,13 @@ $(window).on("load", function () {
 });
 // Initialize Isotope
 
-// Modal
-
-// Modal
+// Mangific Pop up
+$(document).ready(function () {
+  $(".popup-link").magnificPopup({
+    type: "image",
+    gallery: {
+      enabled: true, // Enables gallery mode
+    },
+  });
+});
+// Mangific Pop up
