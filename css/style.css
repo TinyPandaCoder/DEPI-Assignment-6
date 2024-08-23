@@ -333,6 +333,10 @@ div#next-word {
 #portfolio div.portfolioContainer div.item-box button:hover div.overlay {
   opacity: 1;
 }
+#portfolio .portfolioContainer .item-box {
+  display: flex;
+  justify-content: center;
+}
 /* Portfilio */
 
 /* Stats */
